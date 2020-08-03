@@ -1,5 +1,5 @@
 {
-  "name": "secondScraper",
+  "name": "v-2",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,6 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
-    "cheerio": "^1.0.0-rc.3"
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
