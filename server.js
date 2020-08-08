@@ -1,29 +1,29 @@
 // Require/import the HTTP module
 var express = require('express');
-const cheerio = require('cheerio');
 const axios = require('axios');
+const cheerio = require('cheerio');
 
 // const lo = cheerio.load('<h2 class="title">Hello world</h2>');
 
 axios.get("https://arstechnica.com/gadgets/").then(urlResponse => {
   const $ = cheerio.load(urlResponse.data);
   //.each for multiple articles i for index of each element
-  $("li.article").each((i, element) => {
-    const headlines = $(element).find("a.overlay").attr("href");
+  // $("li.article").each((i, element) => {
+  //   const headlines = $(element).find("a.overlay").attr("href");
     //log all article headlines 
-    console.log(headlines);
+  //  console.log(headlines);
 
     //Express app to register this route handler, listen/watch for the http get method 
-    //with end point "/srapes", request object (req) that represents incoming requests,
+    //with end point "/", request object (req) that represents incoming requests,
     //res object that represents the outgoing response
-    app.get("/scrapes", (req, res) => {
+    app.get("/", (req, res) => {
       //Load entire page to the browser:
       res.send(urlResponse.data);
     });
-  })
+//  })
 });
 //Bring in a node.js module to deal with file paths called "path"
-const path = require('path');
+//const path = require('path');
 
 const app = express();
 
