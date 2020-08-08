@@ -13,39 +13,26 @@ axios.get("https://arstechnica.com/gadgets/").then(urlResponse => {
     //log all article headlines 
     console.log(headlines);
 
-  //Load entire page to the browser:
-   app.get("/scrapes", (req, res) => {
+    //Express app to register this route handler, listen/watch for the http get method 
+    //with end point "/srapes", request object (req) that represents incoming requests,
+    //res object that represents the outgoing response
+    app.get("/scrapes", (req, res) => {
+      //Load entire page to the browser:
       res.send(urlResponse.data);
-
     });
   })
 });
-  //bring in a node.js module to deal with file paths called "path"
+//Bring in a node.js module to deal with file paths called "path"
 const path = require('path');
 
 const app = express();
 
-// // Define a port to listen for incoming requests
+//Define a port to listen for incoming requests process.env.PORT is for Heroku to host later. or 8000 for dev
 var PORT = process.env.PORT || 8000;
 
-
-// // Create a generic function to handle requests and responses
-// function handleRequest(request, response) {
-
-// //   // Send the below string to the client when the user visits the PORT URL
-//  response.end("It Works!! Path Hit: " + request.url);
-//  };
-
-// // Use the Node HTTP package to create our server.
-// // Pass the handleRequest function to empower it with functionality.
- //var server = http.createServer(handleRequest);
-// app.get("/scrapes", (req, res) => {
-//   res.json(member)
-// })
-
-// // Start our server so that it can begin listening to client requests.
+ //Express app listening/ Start server so that it can begin listening to client requests.
  app.listen(PORT, function() {
  
-//   // Log (server-side) when our server has started
+   // Log (server-side) when our server has started
    console.log(`Server listening on: http://localhost: ${PORT}`);
  });

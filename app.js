@@ -12,5 +12,3 @@
 //     console.log(link);
 //     })
 //     });
-//NOTES: Server to connect back end with the html
-//send axios data to api and work on it from there
