@@ -4,8 +4,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* Button to click and run scrape */}
-      <a href="http://localhost:8000">Scrape now</a>
+     <a href="https://frozen-sands-74181.herokuapp.com/scrapers">
+      Hello scrapers
+     </a>
     </div>
   );
 }
