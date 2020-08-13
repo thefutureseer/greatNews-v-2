@@ -3,6 +3,7 @@ var express = require('express');
 const axios = require('axios');
 //const cheerio = require('cheerio');
 const path = require('path');
+const app = express();
 
 // const lo = cheerio.load('<h2 class="title">Hello world</h2>');
 
@@ -36,7 +37,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const app = express();
 
 //Define a port to listen for incoming requests process.env.PORT is for Heroku to host later. or 8000 for dev
 var PORT = process.env.PORT || 8000;
