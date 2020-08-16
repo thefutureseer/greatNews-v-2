@@ -1,11 +1,10 @@
 // Require/import the HTTP module
-var express = require('express');
+const express = require('express');
+const app = express();
 const axios = require('axios');
 //const cheerio = require('cheerio');
 const path = require('path');
-const app = express();
 
-// const lo = cheerio.load('<h2 class="title">Hello world</h2>');
 
 axios.get("https://arstechnica.com/gadgets/").then(urlResponse => {
 //const $ = cheerio.load(urlResponse.data);
@@ -18,7 +17,7 @@ axios.get("https://arstechnica.com/gadgets/").then(urlResponse => {
     //Express app to register this route handler, listen/watch for the http get method 
     //with end point "/", request object (req) that represents incoming requests,
     //res object that represents the outgoing response
-    app.get("/scrapers", (req, res) => {
+    app.get("/", (req, res) => {
       //Load entire page to the browser:
       res.send(urlResponse.data);
     });

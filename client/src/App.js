@@ -1,12 +1,15 @@
-import React from 'react';
-import PersonStreetList from './Page';
-//import './'
-import './App.css';
+// import React from 'react';
+// //import PersonStreetList from './Page';
+// //import Cheersing from './components/Cheers';
+// import Button from './components/button';
+// import './App.css';
 
-function App() {
- return (
-    <PersonStreetList />
- );
-}
+// function App() {
+//  return (
+//   <Button />
+//   //<Cheersing />
+//   //<PersonStreetList />
+//  );
+// }
 
-export default App;
+// export default App;
