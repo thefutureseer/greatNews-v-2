@@ -1,9 +1,10 @@
-// import React from 'react'
+import React from 'react'
+import PersonList from './Page'
 
-// export default function Button() {
-//   return (
-//     <button>
-//       Press this
-//     </button>
-//   )
-// }
+export default function Button() {
+  return (
+    
+    <PersonList />
+
+  )
+}

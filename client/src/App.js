@@ -1,15 +1,14 @@
-// import React from 'react';
-// //import PersonStreetList from './Page';
-// //import Cheersing from './components/Cheers';
-// import Button from './components/button';
-// import './App.css';
+import React from 'react';
+//import Cheersing from './components/Cheers';
+import Button from './components/button';
+import './App.css';
 
-// function App() {
-//  return (
-//   <Button />
-//   //<Cheersing />
-//   //<PersonStreetList />
-//  );
-// }
+function App() {
+ return (
+   <div>
+    <Button />
+  </div>
+ )
+}
 
-// export default App;
+export default App;
